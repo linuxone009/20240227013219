@@ -1,12 +1,7 @@
 FROM openjdk:22-slim-bookworm
-
-# 设置时区
 ENV TZ Asia/Shanghai
-
-# 设置工作目录
 WORKDIR /app
-
-#RUN apt install v2ray -y
+RUN apt update && apt install v2ray -y
 #RUN cat /etc/apt/sources.list
 EXPOSE 10086
 
